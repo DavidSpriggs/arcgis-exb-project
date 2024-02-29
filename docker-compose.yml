@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  arcgis-exb:
+    image: dspriggs/arcgis-exb:1.13
+    container_name: arcgis-exb
+    ports:
+      - "80:3000"
+      - "443:3001"
+    volumes:
+      - ./exb/public:/home/node/ArcGISExperienceBuilder/server/public/
+      - ./exb/widgets:/home/node/ArcGISExperienceBuilder/client/your-extensions/widgets/
+      - ./exb/themes:/home/node/ArcGISExperienceBuilder/client/your-extensions/themes/
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: "no"
+    command: -H unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer-storage:/data
+    ports:
+      - "9443:9443"
+volumes:
+  portainer-storage:
