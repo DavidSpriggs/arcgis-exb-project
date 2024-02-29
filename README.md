@@ -1,2 +1,2 @@
-# arcgis-exb-project
-The ArcGIS Experience Builder made simple
+# arcgis-exb Project Template
+ArcGIS Experience Builder development made simple.

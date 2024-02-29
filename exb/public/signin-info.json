@@ -1,7 +1,7 @@
 [
   {
-    "portalUrl": "https://atsgis.maps.arcgis.com",
-    "clientId": "KENRzTGRUC0giYaf",
+    "portalUrl": "https://www.arcgis.com",
+    "clientId": "",
     "supportsOAuth": true,
     "isWebTier": false
   }
