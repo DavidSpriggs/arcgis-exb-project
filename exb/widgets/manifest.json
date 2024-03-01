@@ -1,0 +1,7 @@
+{
+  "name": "esri-core-repo",
+  "type": "exb-web-extension-repo",
+  "description": "This is a sample extension repository, put your extensions here.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0"
+}
