@@ -1,0 +1,8 @@
+[
+  {
+    "portalUrl": "https://myportal.maps.arcgis.com",
+    "clientId": "my-client-id",
+    "supportsOAuth": true,
+    "isWebTier": false
+  }
+]
