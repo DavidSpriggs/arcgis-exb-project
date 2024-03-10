@@ -23,6 +23,9 @@ Next, initialize the folder as a new git repo for you to develop in:
 ```shell
 git init
 ```
+
+The docker compose file is defaulted to use the current version of Experience Builder `1.13`. If you need an older version, edit line 4 to reflect the version you need. To see the available prebuilt versions, visit [docker hub](https://hub.docker.com/r/dspriggs/arcgis-exb/tags).
+
 You are now ready to make commits and push them to your source control when ready.
 
 # Copy the client
@@ -39,26 +42,12 @@ This will ask you which version of ExB you are using, (look on line 4 of docker 
 You are now ready to start developing.
 
 # Start-up and usage
-To start using your new project, start up the docker compose file. 
-
-The docker compose file is defaulted to use the current version of Experience Builder `1.13`. If you need an older version, edit line 4 to reflect the version you need. To see the available prebuilt versions, visit [docker hub](https://hub.docker.com/r/dspriggs/arcgis-exb/tags).
-
-In the same directory as the `docker-compose.yml` file run:
-```shell
-docker compose up -d
-```
-This will download the images and run them in your docker environment.
-
-## portainer image
-Portainer allows you to manage the containers in the docker compose configuration. To open portainer, visit: https://localhost:9443 you will need to create a user and password the first time. With portainer you can easily restart the arcgis-exb container and view its logs.
-
-## arcgis-exb image
 Before launching Experiance Builder, edit the `server/public/signin-info.json` file to point to your portal and app. You can create a new app here: https://developers.arcgis.com/applications/
 ```javascript
 [
   {
     "portalUrl": "https://myportal.maps.arcgis.com",
-    "clientId": "my-client-id",
+    "clientId": "my_client_id",
     "supportsOAuth": true,
     "isWebTier": false
   }
@@ -66,6 +55,17 @@ Before launching Experiance Builder, edit the `server/public/signin-info.json` f
 ```
 To start using the ArcGIS Experience builder, visit: https://localhost and sign in. Make sure to add `https://localhost` to your apps allowed redirect urls.
 
+To start using your new project, start up the docker compose file. 
+
+In the same directory as the `docker-compose.yml` file run:
+```shell
+docker compose up -d
+```
+This will download the images and run them in your docker environment.
+
 You can now add your custom themes and widgets the the `client/your-extensions/themes` and `client/your-extensions/widgets` folders for development. 
 
 Note: adding new folders or files requires you to restart Experience Builder before it will see them. To restart Experience Builder, open portainer at https://localhost:9443 and restart the arcgis-exb container.
+
+## portainer image
+Portainer allows you to manage the containers in the docker compose configuration. To open portainer, visit: https://localhost:9443 you will need to create a user and password the first time. With portainer you can easily restart the arcgis-exb container and view its logs.
