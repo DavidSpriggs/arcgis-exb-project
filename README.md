@@ -24,20 +24,20 @@ Next, initialize the folder as a new git repo for you to develop in:
 git init
 ```
 
-The docker compose file is defaulted to use the current version of Experience Builder `1.13`. If you need an older version, edit line 4 to reflect the version you need. To see the available prebuilt versions, visit [docker hub](https://hub.docker.com/r/dspriggs/arcgis-exb/tags).
+The docker compose file is defaulted to use the current version of Experience Builder `1.14`. If you need an older version, edit line 4 to reflect the version you need. To see the available prebuilt versions, visit [docker hub](https://hub.docker.com/r/dspriggs/arcgis-exb/tags).
 
 You are now ready to make commits and push them to your source control when ready.
 
 # Copy the client
 Before you can begin, you need to pull the ExB client from the container to you local disk. This will give you full typings on all ExB objects. 
 
-Note which version of the ExB you are using in the docker compose file. The docker compose file is defaulted to use the current version of Experience Builder `1.13`. If you need an older version, edit line 4 to reflect the version you need. To see the available prebuilt versions, visit [docker hub](https://hub.docker.com/r/dspriggs/arcgis-exb/tags).
+Note which version of the ExB you are using in the docker compose file. The docker compose file is defaulted to use the current version of Experience Builder `1.14`. If you need an older version, edit line 4 to reflect the version you need. To see the available prebuilt versions, visit [docker hub](https://hub.docker.com/r/dspriggs/arcgis-exb/tags).
 
 To pull the client from the container run:
 ```shell
 sh ./get-exb-client.sh
 ```
-This will ask you which version of ExB you are using, (look on line 4 of docker compose, currently `1.13`). After entering a value, it will start a temporary container, copy the client, then shutdown the container. 
+This will ask you which version of ExB you are using, (look on line 4 of docker compose, currently `1.14`). After entering a value, it will start a temporary container, copy the client, then shutdown the container. 
 
 You are now ready to start developing.
 
