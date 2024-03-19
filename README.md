@@ -28,7 +28,7 @@ The docker compose file is defaulted to use the current version of Experience Bu
 
 You are now ready to make commits and push them to your source control when ready.
 
-# Copy the client
+## Copy the client
 Before you can begin, you need to pull the ExB client from the container to you local disk. This will give you full typings on all ExB objects. 
 
 Note which version of the ExB you are using in the docker compose file. The docker compose file is defaulted to use the current version of Experience Builder `1.14`. If you need an older version, edit line 4 to reflect the version you need. To see the available prebuilt versions, visit [docker hub](https://hub.docker.com/r/dspriggs/arcgis-exb/tags).
@@ -41,7 +41,7 @@ This will ask you which version of ExB you are using, (look on line 4 of docker 
 
 You are now ready to start developing.
 
-# Start-up and usage
+## Start-up and usage
 Before launching Experiance Builder, edit the `server/public/signin-info.json` file to point to your portal and app. You can create a new app here: https://developers.arcgis.com/applications/
 ```javascript
 [
@@ -67,5 +67,8 @@ You can now add your custom themes and widgets the the `client/your-extensions/t
 
 Note: adding new folders or files requires you to restart Experience Builder before it will see them. To restart Experience Builder, open portainer at https://localhost:9443 and restart the arcgis-exb container.
 
-## portainer image
+## Export an app
+If you want to export a configured app from ExB, you can do it from the Experiance builder UI. Alternativly, you can also do it with the `export-exb-app.sh` script. Follow the prompts.
+
+# Portainer
 Portainer allows you to manage the containers in the docker compose configuration. To open portainer, visit: https://localhost:9443 you will need to create a user and password the first time. With portainer you can easily restart the arcgis-exb container and view its logs.
