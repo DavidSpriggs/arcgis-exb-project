@@ -17,8 +17,6 @@ rm -rf .git
 ```
 This will delete the git history and unlink the repo from its original parent.
 
-Note: Feel free to delete the `simple` widget too. It is provided as an example widget.
-
 Next, initialize the folder as a new git repo for you to develop in:
 ```shell
 git init
