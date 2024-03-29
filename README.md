@@ -70,6 +70,13 @@ Exporting an app from the ExB UI will not embed your `clientID` in the app. To e
 ```shell
 sh ./export-exb-app.sh
 ```
+# Upgrade ExB version
+To upgrade or change version of ExB you are using in your project do the following:
+1. Commit and push the project so that everything is saved/backed up.
+2. Delete everything in the `client` folder EXCEPT the `your-extensions` folder. This folder contains your custom widgets/themes and is the only folder that is tracked in git.
+3. Open the `docker-compose.yml` file and change the `arcgis-exb` image tag to the version you want. `1.14` for example.
+4. Run the `get-exb-client.sh` script and enter the ExB version you want to copy into your client folder.
+5. Run `docker compose up -d` command. You are now on a new version of ExB.
 
 # Portainer
 Portainer allows you to manage the containers in the docker compose configuration. To open portainer, visit: https://localhost:9443 you will need to create a user and password the first time. With portainer you can easily restart the arcgis-exb container and view its logs.
