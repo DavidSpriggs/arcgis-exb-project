@@ -27,7 +27,7 @@ The docker compose file is defaulted to use the current version of Experience Bu
 You are now ready to make commits and push them to your source control when ready.
 
 ## Copy the client
-Before you can begin, you need to pull the ExB client from the container to you local disk. This will give you full typings on all ExB objects. 
+Before you can begin, you need to pull the ExB client from the container to your local disk. This will give you full typings on all ExB objects. 
 
 Note which version of the ExB you are using in the docker compose file. The docker compose file is defaulted to use the current version of Experience Builder `1.14`. If you need an older version, edit line 4 to reflect the version you need. To see the available prebuilt versions, visit [docker hub](https://hub.docker.com/r/dspriggs/arcgis-exb/tags).
 
@@ -51,7 +51,7 @@ Before launching Experience Builder, edit the `server/public/signin-info.json` f
   }
 ]
 ```
-To start using the ArcGIS Experience builder, visit: https://localhost and sign in. Make sure to add `https://localhost` to your apps allowed redirect urls.
+
 
 To start using your new project, start up the docker compose file. 
 
@@ -62,6 +62,8 @@ docker compose up -d
 This will download the images and run them in your docker environment.
 
 You can now add your custom themes and widgets the the `client/your-extensions/themes` and `client/your-extensions/widgets` folders for development. 
+
+To start using the ArcGIS Experience builder, visit: https://localhost and sign in. Make sure to add `https://localhost` to your apps allowed redirect urls.
 
 Note: adding new folders or files requires you to restart Experience Builder before it will see them. To restart Experience Builder, open portainer at https://localhost:9443 and restart the arcgis-exb container.
 
