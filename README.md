@@ -7,7 +7,7 @@ This template is designed to become the top level structure to any new ArcGIS Ex
 # Setup
 Note: You need to have docker or docker desktop installed to use this tooling.
 
-To start, clone the repo to a location where you will be doing development for your project (docker must be installed). Clone the repo with you own project name. Replace `My-Project-Name` with your own project name:
+To start, clone the repo to a location where you will be doing development for your project (docker must be installed). Clone the repo with your own project name. Replace `My-Project-Name` with your own project name:
 ```shell
 git clone git@github.com:DavidSpriggs/arcgis-exb-project.git My-Project-Name
 ```
