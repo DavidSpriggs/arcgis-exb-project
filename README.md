@@ -5,7 +5,7 @@ ArcGIS Experience Builder development made simple with Docker.
 This template is designed to become the top level structure to any new ArcGIS Experience builder project. It allows you to develop widgets, themes, and apps, without having to install Experience builder locally. This simplifies development and allows teams to work together without issues and only commit to source control the assets being built.
 
 # Setup
-Note: You need to have docker or docker desktop installed to use this tooling.
+You need to have docker or docker desktop installed to use this tooling. On windows, I recommend using an Ubuntu WSL image with docker installed.
 
 To start, clone the repo to a location where you will be doing development for your project (docker must be installed). Clone the repo with your own project name. Replace `My-Project-Name` with your own project name:
 ```shell
