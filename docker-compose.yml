@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   arcgis-exb:
-    image: dspriggs/arcgis-exb:1.15
+    image: dspriggs/arcgis-exb:1.16
     container_name: arcgis-exb
     ports:
       - "80:3000"

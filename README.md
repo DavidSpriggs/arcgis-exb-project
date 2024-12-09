@@ -22,20 +22,20 @@ Next, initialize the folder as a new git repo for you to develop in:
 git init
 ```
 
-The docker compose file is defaulted to use the current version of Experience Builder `1.15`. If you need an older version, edit line 4 to reflect the version you need. To see the available prebuilt versions, visit [docker hub](https://hub.docker.com/r/dspriggs/arcgis-exb/tags).
+The docker compose file is defaulted to use the current version of Experience Builder `1.16`. If you need an older version, edit line 4 to reflect the version you need. To see the available prebuilt versions, visit [docker hub](https://hub.docker.com/r/dspriggs/arcgis-exb/tags).
 
 You are now ready to make commits and push them to your source control when ready.
 
 ## Copy the client
 Before you can begin, you need to pull the ExB client from the container to your local disk. This will give you full typings on all ExB objects. 
 
-Note which version of the ExB you are using in the docker compose file. The docker compose file is defaulted to use the current version of Experience Builder `1.15`. If you need an older version, edit line 4 to reflect the version you need. To see the available prebuilt versions, visit [docker hub](https://hub.docker.com/r/dspriggs/arcgis-exb/tags).
+Note which version of the ExB you are using in the docker compose file. The docker compose file is defaulted to use the current version of Experience Builder `1.16`. If you need an older version, edit line 4 to reflect the version you need. To see the available prebuilt versions, visit [docker hub](https://hub.docker.com/r/dspriggs/arcgis-exb/tags).
 
 To pull the client from the container run:
 ```shell
 sh ./get-exb-client.sh
 ```
-This will ask you which version of ExB you are using, (look on line 4 of docker compose, currently `1.15`). After entering a value, it will start a temporary container, copy the client, then shutdown the container. 
+This will ask you which version of ExB you are using, (look on line 4 of docker compose, currently `1.16`). After entering a value, it will start a temporary container, copy the client, then shutdown the container. 
 
 You are now ready to start developing.
 
@@ -76,8 +76,8 @@ sh ./export-exb-app.sh
 To upgrade or change version of ExB you are using in your project do the following:
 1. Commit and push the project so that everything is saved/backed up.
 2. Delete everything in the `client` folder EXCEPT the `your-extensions` folder. This folder contains your custom widgets/themes and is the only folder that is tracked in git.
-3. Open the `docker-compose.yml` file and change the `arcgis-exb` image tag to the version you want. `1.15` for example.
-4. Run the `get-exb-client.sh` script and enter the ExB version you want to copy into your client folder. `1.15` for example.
+3. Open the `docker-compose.yml` file and change the `arcgis-exb` image tag to the version you want. `1.16` for example.
+4. Run the `get-exb-client.sh` script and enter the ExB version you want to copy into your client folder. `1.16` for example.
 5. Run the `docker compose up -d` command. You are now on a new version of ExB.
 
 # Portainer
